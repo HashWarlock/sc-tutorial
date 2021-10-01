@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+## Welcome to the Smart Contracts Tutorial
+This tutorial will address the differences between Solidity Smart Contracts on Ethereum & Ink! Smart Contracts on Polkadot. We will then address how to create, compile, deploy and interact with a Smart Contract on Ethereum then step through how to write the equivalent Smart Contract in Ink! on Polkadot.
 
 You can use the [editor on GitHub](https://github.com/HashWarlock/sc-tutorial/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
