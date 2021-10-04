@@ -34,7 +34,7 @@ Rust is the programming language for !ink Smart Contracts. Diving into Rust and 
 - A pointer is the address of on the stack that points to a value slot. Dereferencing the pointer will access the value stored in the memory location.
 
 Ex:
-```
+```rust
 // variable = value
 let x = 1;
 // variable = pointer
@@ -57,3 +57,42 @@ assert_eq!(z,x);
   - Regions of memory automatically loaded into the program's memory & lives for the entirety of your program's lifetime.
   - Static references that don't point to static memory will live up to what your program dictates or until the program dies. These will be signified with the `static` keyword
 
+### Ownership
+- Only one owner for all values & enforced by the borrow checker
+- If a value is moved to a new ownership it is no longer accessible unless the value's type implements the `Copy` trait
+- Types that contain non-copy types or types that require deallocation when a value is dropped cannot use `Copy` trait
+- Rust automatically drops values when they go out of scope. The rule drop order for rust is:
+  - variables (including function args) are dropped in reverse order
+  - nested-values are dropped in source code order
+  - A hash table with a key value pair will drop the table first before the key value pair
+
+### Borrowing and Lifetimes
+- The value a shared reference points will be read once & reused by the rust compiler
+Example from Rust for Rustaceans rust assumes shared references are immutable
+```rust
+fn cache(input: &i32, sum: &mut i32) {
+  *sum = *input + *input;
+  assert_eq!(*sum, 2 * *input);
+}
+```
+- Another shared reference is a mutable reference `&mut T` 
+Example from Rust for Rustaceans rust assumes mutable references are exclusive i.e `noalias(&x, &mut x)` is not possible
+```rust
+fn noalias(input: &i32, output: mut &i32) {
+  if *input == 1 {
+    *output = 2;
+  }
+  if *input != 1 {
+    *output = 3;
+  }
+}
+```
+Example from Rust for Rustaceans mutability applies only to the immediately referenced memory
+```rust
+let x = 1;
+let mut y = &x; // y is of type &i32
+let z = &mut y; //z is of type &mut &i32
+```
+- Interior Mutability
+  - Rely on additional mechanisms like atomoic CPU instructions or invariants to provide safe mutability without relying on the semantics of exclusive reference.
+- Lifetime is a region of code that some reference should be valid for.
