@@ -26,7 +26,7 @@ Displayed below is a table signifying the diffrences between ink! and Solidity. 
 
 ### Rust
 Rust is the programming language for !ink Smart Contracts. Diving into Rust and the capabilities offered will allow for a developer to be more flexible & generic than Domain Specific Languages like Solidity. Next will dive into the fundamentals of Rust. 
-#### Memory
+### Memory
 
 ##### Values, Variables & Pointers
 - A value is a combination of a type & an element of that type's domain of values
@@ -43,6 +43,10 @@ let y = &x;
 let z = *y;
 assert_eq!(z,x);
 ```
+
+🎥 Rustling: Variables Example [TODO: Replace w/ commentary video later]
+
+[![Rustling: Variables](https://i9.ytimg.com/vi/VzkJ-FO_ThE/mq2.jpg?sqp=CLCe7YoG&rs=AOn4CLC06pg8HXQseCym0pxboj1dif8VLQ)](https://youtu.be/VzkJ-FO_ThE)
 
 ##### Memory Regions
 - The Stack
