@@ -61,6 +61,11 @@ assert_eq!(z,x);
   - Regions of memory automatically loaded into the program's memory & lives for the entirety of your program's lifetime.
   - Static references that don't point to static memory will live up to what your program dictates or until the program dies. These will be signified with the `static` keyword
 
+🎥 Rustling: Functions Example [TODO: Replace w/ commentary video later]
+
+[![Rustling: Functions](https://i9.ytimg.com/vi/VzkJ-FO_ThE/mq2.jpg?sqp=CLCe7YoG&rs=AOn4CLC06pg8HXQseCym0pxboj1dif8VLQ)](https://youtu.be/VzkJ-FO_ThE)
+
+
 ### Ownership
 - Only one owner for all values & enforced by the borrow checker
 - If a value is moved to a new ownership it is no longer accessible unless the value's type implements the `Copy` trait
@@ -69,6 +74,11 @@ assert_eq!(z,x);
   - variables (including function args) are dropped in reverse order
   - nested-values are dropped in source code order
   - A hash table with a key value pair will drop the table first before the key value pair
+
+#### Ownership Rules
+- Each value has a variable that's called the owner
+- Only one owner at a time
+- Value is dropped when owner leaves scope
 
 ### Borrowing and Lifetimes
 - The value a shared reference points will be read once & reused by the rust compiler
@@ -98,5 +108,31 @@ let mut y = &x; // y is of type &i32
 let z = &mut y; //z is of type &mut &i32
 ```
 - Interior Mutability
-  - Rely on additional mechanisms like atomoic CPU instructions or invariants to provide safe mutability without relying on the semantics of exclusive reference.
+  - Rely on additional mechanisms like atomic CPU instructions or invariants to provide safe mutability without relying on the semantics of exclusive reference.
 - Lifetime is a region of code that some reference should be valid for.
+
+#### Mutable References
+- Variables are immutable by default & this also applies to references. Also, note that you cannot modify a reference that is not mutable.
+- Mutable references have one big restriction: you can have only one mutable reference to a particular piece of data in a particular scope.
+  Example from Rust Programming Language
+```rust
+fn main() {
+    let mut s = String::from("hello");
+
+    change(&mut s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
+
+// Notice below is illegal due to the code have more than 1 mutable references
+fn illegal() {
+  let mut s = String::from("hello");
+
+  let r1 = &mut s;
+  let r2 = &mut s;
+
+  println!("{}, {}", r1, r2);
+}
+```
