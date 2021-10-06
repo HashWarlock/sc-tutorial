@@ -178,6 +178,36 @@ enum WebEvent {
     Click { x: i64, y: i64 },
 }
 ```
+An example & interesting quote about the `IpAddr` standard library from Rust Programming Language:
+```rust
+struct Ipv4Addr {
+    // --snip--
+}
+
+struct Ipv6Addr {
+    // --snip--
+}
+
+enum IpAddr {
+    V4(Ipv4Addr),
+    V6(Ipv6Addr),
+}
+```
+
+>"You can put any kind of data inside an enum variant: strings, numeric types, or structs, for example. You can even include another enum! Also, standard library types are often not much more complicated than what you might come up with."
+
+Lets's create an `enum` called SwitchPort with variants to describe a switch port configuration.
+```rust
+/* SwitchPort characteristics
+ * 1) PortType(String) Access, Hybrid, Trunk
+ * 2) Vlan make this an enum
+ *    - NativeVlan
+ *    - AllowedVlan
+ * 3) Status
+ * 4) Neighbor
+ */
+```
+
 ### Memory
 
 ##### Values, Variables & Pointers
