@@ -47,3 +47,10 @@ Ownership according to Rust.
 
 #### [Borrowing and Lifetimes](./intro-to-rust/borrowing-and-lifetimes.md)
 Understanding what a lifetime is for Rust & how lifetimes are dictated according to Rust.
+
+#### [Modules, Crates, Packages & Paths](./intro-to-rust/modules.md)
+Learn to manage your rust projects with Packages, Crates and Modules
+
+#### [Patterns & Matching](./intro-to-rust/patterns-and-matching.md)
+`TODO`
+
