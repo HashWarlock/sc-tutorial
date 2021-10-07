@@ -59,3 +59,55 @@ Lets's create an `enum` called SwitchPort with variants to describe a switch por
  * 4) Neighbor
  */
 ```
+
+###### `match` Control Flow Operator
+`match` allows you to compare a value against a series of patterns and then execute code based on which pattern matches.
+
+Example from Rust Programming Language
+```rust
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+```
+
+As you can see ing the code above, the `match` in the method `value_in_cents(coin: Coin)` takes in the `enum` `Coin` and will `match` the `coin` parameter to the correct `u8` value as a result.
+
+Another interesting use is matching with `Option<T>`. The example below goes to add one to the `Option<i32>` but if the value is not defined then the function won't attempt to do the addition and return `None`. Just make sure you do not pass `i32` or else the compiler will throw an error for a mismatch of `Option<i32>` not the same type as `i32`. 
+
+```rust
+    fn plus_one(x: Option<i32>) -> Option<i32> {
+        match x {
+            None => None,
+            Some(i) => Some(i + 1),
+        }
+    }
+
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+```
+
+`match` is also exhaustive so if you do not handle every case of your function the compiler will let you know. Rust compiler showing the benefits of preventing easy to miss bugs from slipping into production. Also. note that `_` when you want to match on any other possible `match` then you can use th `_` placeholder. Check the example below for `u8` values:
+
+```rust
+    let some_u8_value = 0u8;
+    match some_u8_value {
+        1 => println!("one"),
+        3 => println!("three"),
+        5 => println!("five"),
+        7 => println!("seven"),
+        _ => (),
+    }
+```
