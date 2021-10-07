@@ -247,7 +247,6 @@ assert_eq!(z,x);
 
 [![Rustling: Functions](https://i9.ytimg.com/vi/VzkJ-FO_ThE/mq2.jpg?sqp=CLCe7YoG&rs=AOn4CLC06pg8HXQseCym0pxboj1dif8VLQ)](https://youtu.be/VzkJ-FO_ThE)
 
-
 ### Ownership
 - Only one owner for all values & enforced by the borrow checker
 - If a value is moved to a new ownership it is no longer accessible unless the value's type implements the `Copy` trait
@@ -264,15 +263,15 @@ assert_eq!(z,x);
 
 ### Borrowing and Lifetimes
 - The value a shared reference points will be read once & reused by the rust compiler
-Example from Rust for Rustaceans rust assumes shared references are immutable
+  Example from Rust for Rustaceans rust assumes shared references are immutable
 ```rust
 fn cache(input: &i32, sum: &mut i32) {
   *sum = *input + *input;
   assert_eq!(*sum, 2 * *input);
 }
 ```
-- Another shared reference is a mutable reference `&mut T` 
-Example from Rust for Rustaceans rust assumes mutable references are exclusive i.e `noalias(&x, &mut x)` is not possible
+- Another shared reference is a mutable reference `&mut T`
+  Example from Rust for Rustaceans rust assumes mutable references are exclusive i.e `noalias(&x, &mut x)` is not possible
 ```rust
 fn noalias(input: &i32, output: mut &i32) {
   if *input == 1 {
