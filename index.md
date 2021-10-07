@@ -27,23 +27,23 @@ Displayed below is a table signifying the diffrences between ink! and Solidity. 
 ### Rust
 Rust is the programming language for !ink Smart Contracts. Diving into Rust and the capabilities offered will allow for a developer to be more flexible & generic than Domain Specific Languages like Solidity. Next will dive into the fundamentals of Rust. 
 
-### [Comments](./intro-to-rust/comments.md)
+#### [Comments](./intro-to-rust/comments.md)
 We start out with comments bc the most important part to building an efficient solution starts at documentation & proper debug logs for troubleshooting.
 
 - Display `fmt::Display` `TODO`
 - Formatting `TODO`
 
-### [Primitives](./intro-to-rust/primitives.md)
+#### [Primitives](./intro-to-rust/primitives.md)
 Rust has many primitives. Let's start with an intro to the types.
 
-### [Custom Types](./intro-to-rust/custom-types.md)
+#### [Custom Types](./intro-to-rust/custom-types.md)
 With great power, comes unlimited possibilities. A dive into structs and enums.
 
-### [Memory](./intro-to-rust/memory.md)
+#### [Memory](./intro-to-rust/memory.md)
 Bending the bits & understanding the values of handling your memory efficiently.
 
-### [Ownership](./intro-to-rust/ownership.md)
+#### [Ownership](./intro-to-rust/ownership.md)
 Ownership according to Rust.
 
-### [Borrowing and Lifetimes](./intro-to-rust/borrowing-and-lifetimes.md)
+#### [Borrowing and Lifetimes](./intro-to-rust/borrowing-and-lifetimes.md)
 Understanding what a lifetime is for Rust & how lifetimes are dictated according to Rust.
