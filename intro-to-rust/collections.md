@@ -48,8 +48,8 @@ let row = vec![
 ];
 ```
 
-#### Updating HashMaps
-`TODO`
+#### Create & Update HashMaps
+
 ```rust
 // Create HashMap
 fn main() {
@@ -61,5 +61,39 @@ fn main() {
     scores.insert(String::from("Yellow"), 50);
 }
 
+// Accessing HashMap value with a String as the key
+use std::collections::HashMap;
+
+let mut scores = HashMap::new();
+
+scores.insert(String::from("Blue"), 10);
+scores.insert(String::from("Yellow"), 50);
+
+let team_name = String::from("Blue");
+let score = scores.get(&team_name);
+
+// Iterate over HashMap Key/Value. Note you need to use a reference '&scores' 
+use std::collections::HashMap;
+
+let mut scores = HashMap::new();
+
+scores.insert(String::from("Blue"), 10);
+scores.insert(String::from("Yellow"), 50);
+
+for (key, value) in &scores {
+    println!("{}: {}", key, value);
+}
+
+// Insert a key only if it doesn't exist with a value using Entry enum
+// Notice Blue would output 10 & not allow for the overwrite w/ the or_insert() method
+use std::collections::HashMap;
+
+let mut scores = HashMap::new();
+scores.insert(String::from("Blue"), 10);
+
+scores.entry(String::from("Yellow")).or_insert(50);
+scores.entry(String::from("Blue")).or_insert(50);
+
+println!("{:?}", scores);
 
 ```
