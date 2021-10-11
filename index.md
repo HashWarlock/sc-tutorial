@@ -54,3 +54,8 @@ Learn to manage your rust projects with Packages, Crates and Modules
 #### [Patterns & Matching](./intro-to-rust/patterns-and-matching.md)
 `TODO`
 
+#### [Error Handling](./intro-to-rust/error-handling.md)
+Different ways to handle errors from the basics to optimal uses of the operator `?`
+
+#### [Generic Types, Traits, & Lifetimes](./intro-to-rust/generics.md)
+Understanding the performance advantage of generics & how to utilize them in your code
