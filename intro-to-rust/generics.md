@@ -97,7 +97,7 @@ let s = S(vec![1]);
 #### Lifetime Annotation Syntax
 Lifetime annotations have a slightly unusual syntax: the names of lifetime parameters must start with an apostrophe `(')` and are usually all lowercase and very short, like generic types. Most people use the name `'a`. We place lifetime parameter annotations after the `&` of a reference, using a space to separate the annotation from the reference’s type.
 
-Here is an example from The Rust Programming Languagw:
+Here is an example from The Rust Programming Language:
 ```rust
 &i32        // a reference
 &'a i32     // a reference with an explicit lifetime

@@ -59,3 +59,6 @@ Different ways to handle errors from the basics to optimal uses of the operator 
 
 #### [Generic Types, Traits, & Lifetimes](./intro-to-rust/generics.md)
 Understanding the performance advantage of generics & how to utilize them in your code
+
+#### [Options](./intro-to-rust/options.md)
+`Option<T>` is an `enum` that is generic over type T and has two variants: Some, which holds one value of type T, and a None variant that doesn’t hold any value. 
