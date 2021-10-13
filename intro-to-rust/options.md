@@ -6,4 +6,12 @@ enum Option<T> {
     None,
 }
 ```
-`TODO` Continue from here
+`Option<T>` has a number of uses:
+- Initial values
+- Return values for functions that are not defined over their entire input range (partial functions)
+- Return value for otherwise reporting simple errors, where `None` is returned on error
+- Optional struct fields
+- Struct fields that can be loaned or "taken"
+- Optional function arguments
+- Nullable pointers
+- Swapping things out of difficult situations

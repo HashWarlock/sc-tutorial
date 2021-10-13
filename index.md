@@ -62,3 +62,6 @@ Understanding the performance advantage of generics & how to utilize them in you
 
 #### [Options](./intro-to-rust/options.md)
 `Option<T>` is an `enum` that is generic over type T and has two variants: Some, which holds one value of type T, and a None variant that doesn’t hold any value. 
+
+#### [Traits](./intro-to-rust/traits.md)
+A trait is a collection of methods.
