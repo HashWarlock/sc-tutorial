@@ -68,3 +68,6 @@ A trait is a collection of methods.
 
 #### [Tests](./intro-to-rust/tests.md)
 Tests are Rust functions that verify that the non-test code is functioning in the expected manner.
+
+#### [Box, Shared-State Concurrency & Iterators](./intro-to-rust/standard-library-types.md)
+A look into some standard library types.
