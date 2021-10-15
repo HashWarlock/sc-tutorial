@@ -65,3 +65,6 @@ Understanding the performance advantage of generics & how to utilize them in you
 
 #### [Traits](./intro-to-rust/traits.md)
 A trait is a collection of methods.
+
+#### [Tests](./intro-to-rust/tests.md)
+Tests are Rust functions that verify that the non-test code is functioning in the expected manner.
