@@ -36,6 +36,9 @@ We start out with comments bc the most important part to building an efficient s
 #### [Primitives](./intro-to-rust/primitives.md)
 Rust has many primitives. Let's start with an intro to the types.
 
+#### [Strings](./intro-to-rust/strings.md)
+Rust has two string types, a string slice (`&str`) and an owned string (`String`).
+
 #### [Structs](./intro-to-rust/structs.md)
 A struct, or structure, is a custom data type that lets you name and package together multiple related values that make up a meaningful group.
 
