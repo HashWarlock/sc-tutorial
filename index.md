@@ -77,3 +77,6 @@ Tests are Rust functions that verify that the non-test code is functioning in th
 
 #### [Box, Shared-State Concurrency & Iterators](./intro-to-rust/standard-library-types.md)
 A look into some standard library types.
+
+#### [Phala Fat Contracts Tutorial (No Audio)](./https://www.youtube.com/watch?v=uV7Qv4l6qk8)
+A short demo on how to deploy a Fat Contract
