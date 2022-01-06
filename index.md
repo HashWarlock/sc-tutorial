@@ -26,6 +26,7 @@ Displayed below is a table signifying the diffrences between ink! and Solidity. 
 
 ### Rust
 Rust is the programming language for !ink Smart Contracts. Diving into Rust and the capabilities offered will allow for a developer to be more flexible & generic than Domain Specific Languages like Solidity. Next will dive into the fundamentals of Rust. 
+> If you're all about the gist of things, I found this [cheatsheet](https://cheats.rs/) incredibly informative.
 
 #### [Comments](./intro-to-rust/comments.md)
 We start out with comments bc the most important part to building an efficient solution starts at documentation & proper debug logs for troubleshooting.
